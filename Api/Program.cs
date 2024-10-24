@@ -1,6 +1,5 @@
 using Application.Extensions;
 using HealthChecks.UI.Client;
-using Infrastructure.Extensions;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
 
@@ -16,8 +15,7 @@ builder.Services.AddSwaggerGen();
 
 // custom extensions 
 builder.Services
-    .AddApplication()
-    .AddInfrastructure();
+    .AddApplication();
 
 builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 

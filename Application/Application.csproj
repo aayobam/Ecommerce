@@ -20,6 +20,10 @@
 
   <ItemGroup>
     <Folder Include="Categories\Queries\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Queries\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
