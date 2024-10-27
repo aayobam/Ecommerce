@@ -1,8 +1,8 @@
 ﻿namespace Domain.Common;
 
-public class BaseEntity
+public abstract class BaseEntity
 {
     public Guid Id { get; set; }
-    public DateTime DateCreated { get; set; } = DateTime.UtcNow;
-    public DateTime DateModified { get; set; } = DateTime.UtcNow;
+    public DateTimeOffset DateCreated { get; set; } = DateTimeOffset.Now;
+    public DateTimeOffset DateModified { get; set; } = DateTimeOffset.Now;
 }

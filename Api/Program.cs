@@ -1,7 +1,7 @@
 using Application.Extensions;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
-using Serilog;
+using Persistence.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,9 +15,10 @@ builder.Services.AddSwaggerGen();
 
 // custom extensions 
 builder.Services
-    .AddApplication();
+    .AddApplicationService()
+    .AddPersitenceService(builder.Configuration);
 
-builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
+//builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 
 var app = builder.Build();
 

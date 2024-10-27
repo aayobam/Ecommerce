@@ -1,6 +1,8 @@
-﻿namespace Domain.Entities;
+﻿using Domain.Common;
 
-public class Variation
+namespace Domain.Entities;
+
+public class Variation : BaseEntity
 {
-
+    public string Name { get; set; }
 }

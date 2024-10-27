@@ -1,7 +1,8 @@
 ﻿using Domain.Common;
 
-namespace Domain.Dtos.Category;
+namespace Application.DTOs.Category;
 
 public class CategoryVm : BaseEntity
 {
+    public required string Name { get; set; }
 }

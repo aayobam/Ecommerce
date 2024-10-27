@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
-using Domain.Dtos.Category;
+using Application.DTOs.Category;
 using Domain.Entities;
 using MediatR;
 

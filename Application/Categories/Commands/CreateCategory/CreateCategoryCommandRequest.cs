@@ -1,4 +1,4 @@
-﻿using Domain.Dtos.Category;
+﻿using Application.DTOs.Category;
 using MediatR;
 
 namespace Application.Categories.Commands.CreateCategory;

@@ -65,10 +65,6 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[8.0.1, )"
-            },
-            "Serilog.AspNetCore": {
-              "target": "Package",
-              "version": "[8.0.3, )"
             }
           },
           "imports": [
@@ -133,15 +129,7 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "FluentValidation.DependencyInjectionExtensions": {
-              "target": "Package",
-              "version": "[11.10.0, )"
-            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.10, )"
             },
