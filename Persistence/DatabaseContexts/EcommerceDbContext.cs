@@ -41,4 +41,5 @@ public class EcommerceDbContext : IdentityDbContext
     public DbSet<Order> Orders { get; set; }
     public DbSet<WishList> WishLists { get; set; }
     public DbSet<Review> Reviews { get; set; }
+    public DbSet<AuditTrail> AuditTrails { get; set; }
 }

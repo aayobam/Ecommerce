@@ -1,5 +1,7 @@
-﻿namespace Application.Contracts.Persistence;
+﻿using Domain.Entities;
 
-public interface IOrderRepository
+namespace Application.Contracts.Persistence;
+
+public interface IOrderRepository: IGenericRepository<Order>
 {
 }

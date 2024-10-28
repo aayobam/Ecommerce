@@ -1,5 +1,7 @@
-﻿namespace Application.Contracts.Persistence;
+﻿using Domain.Entities;
 
-public interface IUserRepository
+namespace Application.Contracts.Persistence;
+
+public interface IUserRepository: IGenericRepository<ApplicationUser>
 {
 }

@@ -4,9 +4,10 @@ using Persistence.DatabaseContexts;
 
 namespace Persistence.Repositories;
 
-public class RoleRepository : GenericRepository<ApplicationRole>, IRoleRepository
+public class RoleRepository : GenericRepository<ApplicationUser>, IRoleRepository
 {
     public RoleRepository(EcommerceDbContext context) : base(context)
     {
     }
 }
+

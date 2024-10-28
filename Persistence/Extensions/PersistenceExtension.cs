@@ -18,11 +18,12 @@ public static class PersistenceExtension
 
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         services.AddScoped<ICategoryRepository, CategoryRepository>();
-        services.AddScoped<IUserRepository, UserRepository>();
-        services.AddScoped<IRoleRepository, RoleRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IItemRepository, ItemRepository>();
+        services.AddScoped<IReviewRepository, ReviewRepository>();
         services.AddScoped<IOrderRepository, OrderRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IRoleRepository, RoleRepository>();
         return services;
     }
 }

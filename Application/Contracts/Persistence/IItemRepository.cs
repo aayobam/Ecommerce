@@ -1,5 +1,7 @@
-﻿namespace Application.Contracts.Persistence;
+﻿using Domain.Entities;
 
-public interface IItemRepository
+namespace Application.Contracts.Persistence;
+
+public interface IItemRepository : IGenericRepository<Item>
 {
 }

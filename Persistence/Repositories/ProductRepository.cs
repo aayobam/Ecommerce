@@ -9,4 +9,9 @@ public class ProductRepository : GenericRepository<Product>, IProductRepository
     public ProductRepository(EcommerceDbContext context) : base(context)
     {
     }
+
+    public Task<bool> IsCategoryNameUniqueAsync(string Name)
+    {
+        throw new NotImplementedException();
+    }
 }

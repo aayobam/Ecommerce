@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\exceptions\\ecommercenotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\exceptions\\ecommercenotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\features\\category\\commands\\deletecategory\\deletecategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\features\\category\\commands\\deletecategory\\deletecategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\features\\category\\commands\\deletecategory\\deletecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\features\\category\\commands\\deletecategory\\deletecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\features\\category\\commands\\updatecategory\\updatecategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\features\\category\\commands\\updatecategory\\updatecategorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\features\\category\\commands\\updatecategory\\updatecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\features\\category\\commands\\updatecategory\\updatecategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C249410F-0019-462B-9451-C24B792C213B}|Persistence\\Persistence.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C249410F-0019-462B-9451-C24B792C213B}|Persistence\\Persistence.csproj|solutionrelative:persistence\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\contracts\\persistence\\igenericrepository.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\contracts\\persistence\\igenericrepository.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\exceptions\\customexception.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\exceptions\\customexception.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,93 +22,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomException.cs",
-              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Exceptions\\CustomException.cs",
-              "RelativeDocumentMoniker": "Application\\Exceptions\\CustomException.cs",
-              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Exceptions\\CustomException.cs",
-              "RelativeToolTip": "Application\\Exceptions\\CustomException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T06:24:38.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EcommerceNotFoundException.cs",
-              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Exceptions\\EcommerceNotFoundException.cs",
-              "RelativeDocumentMoniker": "Application\\Exceptions\\EcommerceNotFoundException.cs",
-              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Exceptions\\EcommerceNotFoundException.cs",
-              "RelativeToolTip": "Application\\Exceptions\\EcommerceNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T06:04:44.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DeleteCategoryCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryCommandHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryCommandHandler.cs",
-              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryCommandHandler.cs",
-              "RelativeToolTip": "Application\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryCommandHandler.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBIAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T05:54:42.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteCategoryCommand.cs",
-              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryCommand.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryCommand.cs",
-              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryCommand.cs",
-              "RelativeToolTip": "Application\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T05:54:34.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Contracts\\Persistence\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "Application\\Contracts\\Persistence\\IGenericRepository.cs",
               "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Contracts\\Persistence\\IGenericRepository.cs",
               "RelativeToolTip": "Application\\Contracts\\Persistence\\IGenericRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T05:51:01.292Z",
+              "WhenOpened": "2024-10-27T09:59:28.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateCategoryCommand.cs",
-              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommand.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommand.cs",
-              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommand.cs",
-              "RelativeToolTip": "Application\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Persistence\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Persistence\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Persistence\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "Persistence\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T05:43:55.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateCategoryCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommandHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommandHandler.cs",
-              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommandHandler.cs",
-              "RelativeToolTip": "Application\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommandHandler.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAIwBkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T05:44:49.914Z",
+              "WhenOpened": "2024-10-27T09:55:32.532Z",
               "EditorCaption": ""
             },
             {

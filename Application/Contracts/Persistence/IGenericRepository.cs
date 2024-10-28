@@ -1,6 +1,8 @@
-﻿namespace Application.Contracts.Persistence;
+﻿using Domain.Common;
 
-public interface IGenericRepository<T> where T : class
+namespace Application.Contracts.Persistence;
+
+public interface IGenericRepository<T> where T : BaseEntity
 {
     Task<T> CreateAsync(T entity);
     Task<IReadOnlyList<T>> GetAllAsync();

@@ -13,6 +13,6 @@ public class CategoryRepository : GenericRepository<Category>, ICategoryReposito
 
     public async Task<bool> IsCategoryNameUniqueAsync(string Name)
     {
-        return await _context.Categories.AnyAsync(x => x.Equals(Name));
+        return await _context.Categories.AnyAsync(c => c.Name == Name);
     }
 }
