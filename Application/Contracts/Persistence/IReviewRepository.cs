@@ -2,6 +2,6 @@
 
 namespace Application.Contracts.Persistence;
 
-public interface IReviewRepository: IGenericRepository<Review>
+public interface IReviewRepository : IGenericRepository<Review>
 {
 }

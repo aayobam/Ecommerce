@@ -1,4 +1,5 @@
 ﻿using Application.Contracts.Persistence;
+using Domain.Dtos.Product;
 using Domain.Entities;
 using Persistence.DatabaseContexts;
 

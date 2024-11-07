@@ -20,5 +20,5 @@ public class Product : BaseEntity
 
     public virtual ICollection<WishList> WishLists { get; set; }
     public virtual ICollection<Color> Colors { get; set; }
-    public virtual ICollection<Review> Reviews { get; set; }
+    public virtual ICollection<Vendor> Reviews { get; set; }
 }

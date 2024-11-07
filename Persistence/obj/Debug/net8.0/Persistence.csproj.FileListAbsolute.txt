@@ -3,8 +3,6 @@ C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persist
 C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\bin\Debug\net8.0\Persistence.pdb
 C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\bin\Debug\net8.0\Application.dll
 C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\bin\Debug\net8.0\Domain.dll
-C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\bin\Debug\net8.0\Infrastructure.dll
-C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\bin\Debug\net8.0\Infrastructure.pdb
 C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\bin\Debug\net8.0\Application.pdb
 C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\bin\Debug\net8.0\Domain.pdb
 C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\obj\Debug\net8.0\Persistence.csproj.AssemblyReference.cache
@@ -17,3 +15,5 @@ C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persist
 C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\obj\Debug\net8.0\refint\Persistence.dll
 C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\obj\Debug\net8.0\Persistence.pdb
 C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\obj\Debug\net8.0\ref\Persistence.dll
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\bin\Debug\net8.0\Persistence.runtimeconfig.json
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence\obj\Debug\net8.0\Persistence.genruntimeconfig.cache

@@ -11,9 +11,7 @@ public class CreateCategoryCommandValidator : AbstractValidator<CreateCategoryCo
     {
         _categoryRepository = categoryRepository;
 
-        RuleFor(x => x.Name)
-            .NotEmpty().WithMessage("{PropertyName} is required")
-            .NotNull()
+        RuleFor(x => x.Name).NotEmpty().WithMessage("{PropertyName} is required")
             .MaximumLength(70).WithMessage("{PropertyName} cannot me more than 70 characters");
 
         RuleFor(x => x)

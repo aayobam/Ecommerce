@@ -1,4 +1,5 @@
-﻿using Application.Contracts.Persistence;
+﻿using Application.Contracts.Logging;
+using Application.Contracts.Persistence;
 using Application.DTOs.Category;
 using AutoMapper;
 using MediatR;
@@ -9,10 +10,11 @@ public class GetCategoriesQueryHandler : IRequestHandler<GetCategoriesQuery, Lis
 {
     private readonly IMapper _mapper;
     private readonly ICategoryRepository _categoryRepository;
-    
+    private readonly IApplicationLogger<GetCategoriesQueryHandler> logger;
 
-    public GetCategoriesQueryHandler(IMapper mapper, ICategoryRepository categoryRepository)
+    public GetCategoriesQueryHandler(IApplicationLogger<GetCategoriesQueryHandler> _logger,IMapper mapper, ICategoryRepository categoryRepository)
     {
+        _logger = logger;
         _mapper = mapper;
         _categoryRepository = categoryRepository;
     }

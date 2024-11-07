@@ -1,4 +1,4 @@
-﻿namespace Domain.ViewModels.Order;
+﻿namespace Application.DTOs.Order;
 
 public class CreateOrderVm
 {

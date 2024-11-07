@@ -1,0 +1,11 @@
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\bin\Debug\net8.0\EventBus.deps.json
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\bin\Debug\net8.0\EventBus.dll
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\bin\Debug\net8.0\EventBus.pdb
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\obj\Debug\net8.0\EventBus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\obj\Debug\net8.0\EventBus.AssemblyInfoInputs.cache
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\obj\Debug\net8.0\EventBus.AssemblyInfo.cs
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\obj\Debug\net8.0\EventBus.csproj.CoreCompileInputs.cache
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\obj\Debug\net8.0\EventBus.dll
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\obj\Debug\net8.0\refint\EventBus.dll
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\obj\Debug\net8.0\EventBus.pdb
+C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\EventBus\obj\Debug\net8.0\ref\EventBus.dll

@@ -32,14 +32,16 @@ public class EcommerceDbContext : IdentityDbContext
         return base.SaveChangesAsync(cancellationToken);
     }
 
-    public DbSet<Category> Categories { get; set; }
-    public DbSet<Product> Products { get; set; }
     public DbSet<ApplicationUser> Users { get; set; }
     public DbSet<ApplicationRole> Roles { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Product> Products { get; set; }
     public DbSet<Vendor> Vendors { get; set; }
-    public DbSet<Item> Items { get; set; }
+    public DbSet<Logistic> Logistics { get; set; }
+    public DbSet<Driver> Drivers { get; set; }
     public DbSet<Order> Orders { get; set; }
+    public DbSet<Item> Items { get; set; }
     public DbSet<WishList> WishLists { get; set; }
-    public DbSet<Review> Reviews { get; set; }
+    public DbSet<Vendor> Reviews { get; set; }
     public DbSet<AuditTrail> AuditTrails { get; set; }
 }

@@ -1,6 +1,6 @@
 ﻿using Domain.Common;
 
-namespace Domain.ViewModels.Item;
+namespace Application.DTOs.Item;
 
 public class ItemVm : BaseEntity
 {

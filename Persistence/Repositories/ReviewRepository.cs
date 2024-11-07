@@ -4,7 +4,7 @@ using Persistence.DatabaseContexts;
 
 namespace Persistence.Repositories;
 
-public class ReviewRepository : GenericRepository<ApplicationUser>, IReviewRepository
+public class ReviewRepository : GenericRepository<Review>, IReviewRepository
 {
     public ReviewRepository(EcommerceDbContext context) : base(context)
     {

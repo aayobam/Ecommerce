@@ -1,4 +1,4 @@
-﻿namespace Domain.ViewModels.Item;
+﻿namespace Application.DTOs.Item;
 
 public class CreateItemVm
 {

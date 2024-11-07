@@ -5,20 +5,20 @@ namespace Application.Exceptions;
 
 public class EcommerceBadRequestException : CustomException
 {
-    public List<string> ValidationErrors { get; set; }
+    public IDictionary<string, string[]> ValidationErrors { get; set; }
 
     public EcommerceBadRequestException(string message, string code) : base(message, code)
     {
 
     }
 
-    public EcommerceBadRequestException(string message, ValidationResult validationResult, string code) : base(message, code)
+    public EcommerceBadRequestException(ValidationResult validationResult, string code) : base(code)
     {
-        ValidationErrors = new();
+        ValidationErrors = validationResult.ToDictionary();
 
-        foreach (var error in validationResult.Errors)
-        {
-            ValidationErrors.Add(error.ErrorMessage);
-        }
+        //foreach (var error in validationResult.Errors)
+        //{
+        //    ValidationErrors.Add(error.ErrorMessage);
+        //}
     }
 }

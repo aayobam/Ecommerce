@@ -11,22 +11,22 @@ public class AutomapperProfile : Profile
 {
     public AutomapperProfile()
     {
-        // Application user mapping
-        CreateMap<ApplicationUser, ApplicationUserVm>().ReverseMap();
-        CreateMap<CreateApplicationUserVm, ApplicationUser>().ReverseMap();
-        CreateMap<UpdateApplicationUserVm, ApplicationUser>().ReverseMap();
+        // Application user mapping.
+        CreateMap<ApplicationUser, UserVm>().ReverseMap();
+        CreateMap<CreateUserVm, ApplicationUser>().ReverseMap();
+        CreateMap<UpdateUserVm, ApplicationUser>().ReverseMap();
 
-        // Vendor mapping
+        // Vendor mapping.
         CreateMap<Vendor, VendorVm>().ReverseMap();
         CreateMap<CreateVendorVm, VendorVm>().ReverseMap();
         CreateMap<UpdateVendorVm, VendorVm>().ReverseMap();
 
-        // Category mapping
+        // Category mapping.
         CreateMap<Category, CategoryVm>().ReverseMap();
         CreateMap<CreateCategoryVm, Category>().ReverseMap();
         CreateMap<UpdateCategoryVm, Category>().ReverseMap();
 
-        // Product mapping
+        // Product mapping.
         CreateMap<Product, ProductVm>().ReverseMap();
         CreateMap<CreateProductVm, Product>().ReverseMap();
         CreateMap<UpdateProductVm, Product>().ReverseMap();

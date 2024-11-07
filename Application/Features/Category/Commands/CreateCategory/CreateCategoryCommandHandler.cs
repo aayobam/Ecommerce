@@ -28,7 +28,7 @@ public class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryComman
         if (validationResult.Errors.Any())
         {
             _logger.LogInformation($"\n bad request | {DateTimeOffset.Now} \n");
-            throw new EcommerceBadRequestException("bad request", validationResult, HttpStatusCode.BadRequest.ToString());
+            throw new EcommerceBadRequestException(validationResult, HttpStatusCode.BadRequest.ToString());
         }
         var model = _mapper.Map<Domain.Entities.Category>(request);
         var response = await _categoryRepository.CreateAsync(model);

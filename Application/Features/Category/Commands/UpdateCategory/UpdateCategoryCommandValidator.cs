@@ -1,4 +1,4 @@
-﻿using Application.Contracts.Persistence;
+﻿ using Application.Contracts.Persistence;
 using FluentValidation;
 
 namespace Application.Features.Category.Commands.UpdateCategory;
@@ -18,6 +18,16 @@ public class UpdateCategoryCommandValidator : AbstractValidator<UpdateCategoryCo
 
         RuleFor(x => x)
             .MustAsync(CategoryNameIsUnique).WithMessage("{PropertyName} already exist");
+
+        RuleFor(x => x.Id)
+            .NotNull()
+            .MustAsync(CategoryMustExist);
+    }
+
+    private async Task<bool> CategoryMustExist(Guid id, CancellationToken token)
+    {
+        var instance = await _categoryRepository.GetByIdAsync(id);
+        return instance != null;
     }
 
     private async Task<bool> CategoryNameIsUnique(UpdateCategoryCommand command, CancellationToken token)

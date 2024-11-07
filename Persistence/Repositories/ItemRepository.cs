@@ -1,4 +1,6 @@
 ﻿using Application.Contracts.Persistence;
+using Application.DTOs.Item;
+using Domain.Common;
 using Domain.Entities;
 using Persistence.DatabaseContexts;
 

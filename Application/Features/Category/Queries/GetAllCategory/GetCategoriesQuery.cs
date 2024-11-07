@@ -3,4 +3,4 @@ using MediatR;
 
 namespace Application.Features.Category.Queries.GetAllCategory;
 
-public record GetCategoriesQuery:IRequest<List<CategoryVm>>;
+public record GetCategoriesQuery : IRequest<List<CategoryVm>>;
