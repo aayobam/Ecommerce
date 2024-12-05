@@ -1,3 +1,4 @@
+using Api.Extensions;
 using Application.Extensions;
 using Infrastructure.Extensions;
 using Persistence.Extensions;
@@ -28,33 +29,23 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
-
 var app = builder.Build();
-
-
-
-//app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.ConfigObject.AdditionalItems.Add("persistAuthorization", "true"));
+    app.ApplyMigrations();
 }
-
-//app.UseHealthChecks("/health", new HealthCheckOptions()
-//{
-//    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-//});
-
-//app.UseSerilogRequestLogging();
 
 app.UseCors("CorsPolicy");
 
 app.UseCustomHeaders();
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

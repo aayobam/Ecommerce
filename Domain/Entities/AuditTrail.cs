@@ -7,7 +7,7 @@ namespace Domain.Entities;
 public class AuditTrail : BaseEntity
 {
     public Guid UserId { get; set; }
-    public ApplicationUser User { get; set; }
+    public virtual ApplicationUser User { get; set; }
 
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public Actions Action { get; set; }

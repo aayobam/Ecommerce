@@ -17,13 +17,7 @@ public class MockCategoryRepository
         };
         var mockRepository = new Mock<ICategoryRepository>();
         mockRepository.Setup(repo => repo.GetAllAsync()).ReturnsAsync(categories);
-        //mockRepo.Setup(c => c.CreateAsync(It.IsAny<Category>()))
-        //.ReturnsAsync((Category category) =>
-        //{
-        //    categories.Add(category);
-        //    return Task.CompletedTask;
-        //});
+        mockRepository.Verify(repo => repo.CreateAsync(It.IsAny<Category>()), Times.Once);
         return mockRepository;
-
     }
 }

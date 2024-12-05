@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\features\\applicationuser\\queries\\getuserdetail\\getuserdetailqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\features\\applicationuser\\queries\\getuserdetail\\getuserdetailqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\features\\applicationuser\\queries\\getalluser\\getalluserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\features\\applicationuser\\queries\\getalluser\\getalluserqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C249410F-0019-462B-9451-C24B792C213B}|Persistence\\Persistence.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\persistence\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C249410F-0019-462B-9451-C24B792C213B}|Persistence\\Persistence.csproj|solutionrelative:persistence\\repositories\\rolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C249410F-0019-462B-9451-C24B792C213B}|Persistence\\Persistence.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\persistence\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C249410F-0019-462B-9451-C24B792C213B}|Persistence\\Persistence.csproj|solutionrelative:persistence\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C249410F-0019-462B-9451-C24B792C213B}|Persistence\\Persistence.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C249410F-0019-462B-9451-C24B792C213B}|Persistence\\Persistence.csproj|solutionrelative:persistence\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|c:\\users\\aolowu.sidd2-d54-w11\\desktop\\personal dotnet projects\\ecommerce\\application\\features\\applicationuser\\commands\\createuser\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F6E283-8789-4D7D-9BEC-1EE319BDE5AC}|Application\\Application.csproj|solutionrelative:application\\features\\applicationuser\\commands\\createuser\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1044,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetUserDetailQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\ApplicationUser\\Queries\\GetUserDetail\\GetUserDetailQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\ApplicationUser\\Queries\\GetUserDetail\\GetUserDetailQueryHandler.cs",
+              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\ApplicationUser\\Queries\\GetUserDetail\\GetUserDetailQueryHandler.cs",
+              "RelativeToolTip": "Application\\Features\\ApplicationUser\\Queries\\GetUserDetail\\GetUserDetailQueryHandler.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAMwB4AAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T14:53:15.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetAllUserQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\ApplicationUser\\Queries\\GetAllUser\\GetAllUserQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\ApplicationUser\\Queries\\GetAllUser\\GetAllUserQueryHandler.cs",
+              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\ApplicationUser\\Queries\\GetAllUser\\GetAllUserQueryHandler.cs",
+              "RelativeToolTip": "Application\\Features\\ApplicationUser\\Queries\\GetAllUser\\GetAllUserQueryHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T14:52:22.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RoleRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Persistence\\Repositories\\RoleRepository.cs",
+              "RelativeDocumentMoniker": "Persistence\\Repositories\\RoleRepository.cs",
+              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Persistence\\Repositories\\RoleRepository.cs",
+              "RelativeToolTip": "Persistence\\Repositories\\RoleRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T14:52:12.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Persistence\\Repositories\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "Persistence\\Repositories\\AuthRepository.cs",
+              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Persistence\\Repositories\\AuthRepository.cs",
+              "RelativeToolTip": "Persistence\\Repositories\\AuthRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T14:52:00.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateUserCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\ApplicationUser\\Commands\\CreateUser\\CreateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Features\\ApplicationUser\\Commands\\CreateUser\\CreateUserCommandHandler.cs",
+              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Application\\Features\\ApplicationUser\\Commands\\CreateUser\\CreateUserCommandHandler.cs",
+              "RelativeToolTip": "Application\\Features\\ApplicationUser\\Commands\\CreateUser\\CreateUserCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T14:38:08.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Persistence\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Persistence\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Persistence\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAywEoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T13:54:04.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

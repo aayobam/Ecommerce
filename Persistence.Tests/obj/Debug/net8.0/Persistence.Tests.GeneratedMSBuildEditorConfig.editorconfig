@@ -11,3 +11,5 @@ build_property.RootNamespace = Persistence.Tests
 build_property.ProjectDir = C:\Users\aolowu.SIDD2-D54-W11\Desktop\PERSONAL DOTNET PROJECTS\Ecommerce\Persistence.Tests\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 

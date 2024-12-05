@@ -1,13 +1,7 @@
-﻿using Application.AppSettingsConfig;
-using Domain.Entities;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
+﻿using Api.Middleware;
 using Microsoft.OpenApi.Models;
-using Persistence.DatabaseContexts;
 using Swashbuckle.AspNetCore.Filters;
 using System.Reflection;
-using System.Text;
 
 namespace Application.Extensions;
 
@@ -81,57 +75,6 @@ public static class ApplicationServiceExtension
         return services;
     }
 
-    public static IServiceCollection ConfigureIdentity(this IServiceCollection services, IConfiguration configuration)
-    {
-        var maxFailedAccessAttempts = int.Parse(configuration["MaxFailedAccessAttempts"]!);
-
-        services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
-        {
-            options.User.RequireUniqueEmail = true;
-            options.Password.RequireDigit = true;
-            options.Password.RequireLowercase = true;
-            options.Password.RequireUppercase = true;
-            options.Password.RequireNonAlphanumeric = false;
-            options.Password.RequiredLength = 8;
-            options.Password.RequiredUniqueChars = 1;
-            options.SignIn.RequireConfirmedEmail = true;
-            options.SignIn.RequireConfirmedAccount = true;
-            options.Lockout.AllowedForNewUsers = true;
-            options.Lockout.MaxFailedAccessAttempts = maxFailedAccessAttempts;
-            options.Lockout.DefaultLockoutTimeSpan = DateTime.Now.AddYears(100) - DateTime.Now;
-        })
-            .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>("EcommerceDbContext")
-            .AddEntityFrameworkStores<EcommerceDbContext>()
-            .AddDefaultTokenProviders();
-        return services;
-    }
-
-    public static IServiceCollection ConfigureJwt(this IServiceCollection services, IConfiguration configuration)
-    {
-        services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
-
-        services.AddAuthentication(opt =>
-        {
-            opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-            opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        }).AddJwtBearer(options =>
-        {
-            options.RequireHttpsMetadata = false;
-            options.SaveToken = true;
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateLifetime = true,
-                ValidateIssuerSigningKey = true,
-                ValidIssuer = configuration["JwtSettings:Issuer"],
-                ValidAudience = configuration["JwtSettings:Audience"],
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtSettings:Secret"]!))
-            };
-        });
-        return services;
-    }
-
     public static WebApplication UseCustomHeaders(this WebApplication app)
     {
         app.Use(async (context, next) =>
@@ -147,6 +90,7 @@ public static class ApplicationServiceExtension
             context.Response.Headers.Add("Feature-Policy", "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none';");
             await next();
         });
+        app.UseMiddleware<DatabaseMigrationMiddleware>();
         return app;
     }
 }

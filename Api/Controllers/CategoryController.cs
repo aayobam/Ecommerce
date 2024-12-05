@@ -1,14 +1,12 @@
-﻿using Application.Contracts.Persistence;
-using Application.DTOs.Category;
+﻿using Application.DTOs.Category;
 using Application.Features.Category.Commands.CreateCategory;
+using Application.Features.Category.Commands.DeleteCategory;
 using Application.Features.Category.Commands.UpdateCategory;
 using Application.Features.Category.Queries.GetAllCategory;
 using Application.Features.Category.Queries.GetCatetoryQuery;
 using Application.Responses;
 using AutoMapper;
-using Domain.Entities;
 using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -21,19 +19,17 @@ namespace Api.Controllers;
 public class CategoryController : ControllerBase
 {
     private readonly IMediator _mediator;
-    private readonly IMapper _mapper;
 
-    public CategoryController(IMediator mediator, IMapper mapper)
+    public CategoryController(IMediator mediator)
     {
         _mediator = mediator;
-        _mapper = mapper;
     }
 
-    [HttpGet]
+    [HttpGet("get-categories")]
     [ProducesDefaultResponseType]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<GenericResponse> GetAllCategory()
+    public async Task<GenericResponse> GetCategories()
     {
         var categories = await _mediator.Send(new GetCategoriesQuery());
 
@@ -46,7 +42,7 @@ public class CategoryController : ControllerBase
         };
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("get-category/{id}")]
     [ProducesDefaultResponseType]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -56,10 +52,11 @@ public class CategoryController : ControllerBase
         return category;
     }
 
-    [HttpPost]
+    [HttpPost("create-category")]
     [ProducesDefaultResponseType]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<GenericResponse> CreateCategory(CreateCategoryCommand request)
     {
         var category = await _mediator.Send(request);
@@ -72,7 +69,9 @@ public class CategoryController : ControllerBase
         };
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("update-category/{id}")]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<GenericResponse> UpdateCategory(UpdateCategoryCommand request)
     {
         var category = await _mediator.Send(request);
@@ -86,8 +85,21 @@ public class CategoryController : ControllerBase
         };
     }
 
-    [HttpDelete("{id}")]
-    public void Delete(int id)
+    [HttpDelete("delete-category/{id}")]
+    [ProducesDefaultResponseType]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<GenericResponse> DeleteCategory(DeleteCategoryCommand request)
     {
+        var category = await _mediator.Send(request);
+
+        return new GenericResponse()
+        {
+            Success = true,
+            Message = "success",
+            Data = category,
+            Status = HttpStatusCode.Created.ToString()
+        };
     }
 }

@@ -15,16 +15,15 @@ public static class PersistenceServiceExtension
         {
             options.UseSqlServer(configuration.GetConnectionString("EcommerceDatabaseConnectionString"));
         });
-         
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        services.AddScoped(typeof(IUserRepository<>), typeof(UserRepository<>));
+        services.AddScoped(typeof(IRoleRepository<>), typeof(RoleRepository<>));
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IItemRepository, ItemRepository>();
         services.AddScoped<IReviewRepository, ReviewRepository>();
         services.AddScoped<IOrderRepository, OrderRepository>();
-        //services.AddScoped<IUserRepository, UserRepository>();
-        //services.AddScoped<IRoleRepository, RoleRepository>();
-       
+        services.AddScoped<IAuthRepository, AuthRepository>();
         return services;
     }
 }

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.DatabaseContexts;
 
-public class EcommerceDbContext : IdentityDbContext
+public class EcommerceDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
 {
     public EcommerceDbContext(DbContextOptions<EcommerceDbContext> options) : base(options)
     {
@@ -24,9 +24,9 @@ public class EcommerceDbContext : IdentityDbContext
         {
             if (entry.State == EntityState.Added)
             {
-                entry.Entity.DateCreated = DateTimeOffset.Now;
-            }
-            entry.Entity.DateModified = DateTimeOffset.Now;
+                entry.Entity.DateCreated = DateTime.UtcNow;
+            } 
+            entry.Entity.DateModified = DateTime.UtcNow;
         }
 
         return base.SaveChangesAsync(cancellationToken);

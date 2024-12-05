@@ -11,5 +11,5 @@ public class Item : BaseEntity
     public decimal Total { get; set; }
     public string Description { get; set; }
     public Guid OrderId { get; set; }
-    public Order Order { get; set; }
+    public virtual Order Order { get; set; }
 }
