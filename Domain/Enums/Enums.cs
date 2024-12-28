@@ -2,7 +2,24 @@
 
 public enum Actions
 {
-    Add = 0,
-    Change = 1,
-    Delete = 2,
+    Add,
+    Change,
+    Delete,
+}
+
+public enum OrderStatus
+{
+    Pending,
+    Processed,
+    Shipped,
+    Delivered,
+    Cancelled
+}
+
+public enum DeliveryStatus
+{
+    Pending,
+    InTransit,
+    Delivered,
+    Failed
 }

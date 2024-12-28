@@ -1,50 +1,48 @@
 ﻿using Domain.Entities;
-using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Persistence.DatabaseContexts;
 
 namespace Persistence.Seeders;
 
 public static class DatabaseSeeder
 {
-    //public static WebApplication SeedRoles(this WebApplication app)
-    //{
-    //    string[] initialRoles = new string[] { "vendor", "customer", "admin", "superadmin" };
+    public static async Task SeedData<TEntity>(this IHost host, List<TEntity> entities) where TEntity : Domain.Common.BaseEntity
+    {
+        var serviceProvider = host.Services.CreateScope().ServiceProvider;
+        var context = serviceProvider.GetRequiredService<EcommerceDbContext>();
 
-    //    using (var scope = app.Services.CreateAsyncScope())
-    //    {
-    //        var context = scope.ServiceProvider.GetRequiredService<EcommerceDbContext>();
-    //        var rolesToSeed = new List<ApplicationRole>();
+        var contextEntities = context.Set<TEntity>();
+        if (!contextEntities.Any())
+        {
+            await contextEntities.AddRangeAsync(entities);
+            await context.SaveChangesAsync();
+        }
+    }
 
-    //        if (rolesToSeed.Any())
-    //        {
-    //            foreach (var initialRole in initialRoles)
-    //            {
-    //                if (!context.Roles.Any(r => r.Name == initialRole.ToLower()))
-    //                {
-    //                    var role = new ApplicationRole()
-    //                    {
-    //                        Name = initialRole.ToLower(),
-    //                        NormalizedName = initialRole.ToUpper(),
-    //                    };
-    //                    rolesToSeed.Add(role);
-    //                    Console.WriteLine($"\n Added {initialRole.ToUpper()} \n");
-    //                }
-    //                else
-    //                {
-    //                    Console.WriteLine($"\n Role {initialRole.ToUpper()} already exists. Skipping... \n");
-    //                }
-    //            }
-    //            context.Roles.AddRange(rolesToSeed);
-    //            context.SaveChanges();
-    //            Console.WriteLine("\n All Roles Seeded Successfully \n");
-    //        }
-    //        else
-    //        {
-    //            Console.WriteLine("\n No new roles to seed.\n");
-    //        }
-    //        context.Database.EnsureCreatedAsync();
-    //    }
-    //    return app;
-    //}
+    public static async Task SeedRoles(this IHost host)
+    {
+        var serviceProvider = host.Services.CreateScope().ServiceProvider;
+        var context = serviceProvider.GetRequiredService<EcommerceDbContext>();
+        
+        List<ApplicationRole> roleList = new List<ApplicationRole>()
+        {
+            new ApplicationRole(){Name = "admin", NormalizedName = "ADMIN"},
+            new ApplicationRole(){Name = "driver", NormalizedName = "DRIVER"},
+            new ApplicationRole(){Name = "logistic admin", NormalizedName = "LOGISTIC ADMIN"},
+            new ApplicationRole(){Name = "super admin", NormalizedName = "SUPER ADMIN"},
+        };
+
+        var existingRole = await context.Roles.Select(x => x.Name).ToListAsync();
+
+        foreach (var role in roleList)
+        {
+            if (!existingRole.Contains(role.Name))
+            {
+                context.Roles.Add(role);
+            }
+        }
+        await context.SaveChangesAsync();
+    }
 }

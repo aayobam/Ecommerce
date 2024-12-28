@@ -19,11 +19,11 @@ public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand, Unit>
 
     public async Task<Unit> Handle(DeleteUserCommand request, CancellationToken cancellationToken)
     {
-        var instance = await _userRepository.GetByIdAsync(request.Id);
+        var instance = await _userRepository.GetByIdAsync(request.id);
         if (instance == null)
         {
-            _logger.LogInformation($"\n {nameof(instance)} - {request.Id} | {DateTimeOffset.UtcNow} \n");
-            throw new EcommerceNotFoundException(nameof(instance), request.Id, HttpStatusCode.NotFound.ToString());
+            _logger.LogInformation($"\n {nameof(instance)} - {request.id} | {DateTimeOffset.UtcNow} \n");
+            throw new EcommerceNotFoundException(nameof(instance), request.id, HttpStatusCode.NotFound.ToString());
         }
         await _userRepository.DeleteAsync(instance);
         return Unit.Value;

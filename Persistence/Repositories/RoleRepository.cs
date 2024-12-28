@@ -29,6 +29,11 @@ public class RoleRepository<T> : IRoleRepository<T> where T : ApplicationRole
         throw new NotImplementedException();
     }
 
+    public Task DeleteRangeAsync(List<T> entities)
+    {
+        throw new NotImplementedException();
+    }
+
     public Task<T> FirstOrDefaultNoTracking(Expression<Func<T, bool>> predicate)
     {
         throw new NotImplementedException();

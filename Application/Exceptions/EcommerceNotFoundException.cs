@@ -11,7 +11,7 @@ public class EcommerceNotFoundException : CustomException
         
     }
 
-    public EcommerceNotFoundException(string objectName, object id, string code) : base($"{objectName} : {id} not found", code)
+    public EcommerceNotFoundException(string objectName, object id, string code) : base($"{objectName} with {id} not found", code)
     {
         Code = code;
     }

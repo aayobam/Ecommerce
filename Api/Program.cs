@@ -1,4 +1,4 @@
-using Api.Extensions;
+using Api.Middlewares;
 using Application.Extensions;
 using Infrastructure.Extensions;
 using Persistence.Extensions;
@@ -8,12 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services
-    .AddApplicationService()
     .AddPersitenceService(builder.Configuration)
-    .AddInfrastructureService(builder.Configuration)
-    .ConfigureSwagger()
+    //.ConfigureIdentity(builder.Configuration)
     .ConfigureJwt(builder.Configuration)
-    .ConfigureIdentity(builder.Configuration);
+    .AddApplicationService()
+    .AddInfrastructureService(builder.Configuration)
+    .ConfigureSwagger();
+    
 
 builder.Services.AddCors(options =>
 {
@@ -36,12 +37,14 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => c.ConfigObject.AdditionalItems.Add("persistAuthorization", "true"));
-    app.ApplyMigrations();
+    //app.ApplyMigrations();
 }
 
 app.UseCors("CorsPolicy");
 
 app.UseCustomHeaders();
+
+//app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 

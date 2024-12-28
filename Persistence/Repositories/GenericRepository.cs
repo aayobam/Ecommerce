@@ -47,7 +47,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     public async Task UpdateRangeAsync(List<T> entity)
     {
         _context.UpdateRange(entity);
-        _ = await _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
     }
 
     public IQueryable<T> QueryAll(params Expression<Func<T, bool>>[] predicates)
@@ -79,5 +79,14 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     public async Task<T> FirstOrDefaultNoTracking(Expression<Func<T, bool>> predicate)
     {
         return await _context.Set<T>().AsNoTracking().FirstOrDefaultAsync(predicate);
+    }
+
+    public async Task DeleteRangeAsync(List<T> entities)
+    {
+        foreach(var entity in entities)
+        {
+            _context.Entry(entity).State = EntityState.Deleted;
+        }
+        await _context.SaveChangesAsync();
     }
 }

@@ -39,6 +39,11 @@ public class UserRepository<T> : IUserRepository<T> where T : ApplicationUser
         await _userManager.DeleteAsync(entity);
     }
 
+    public Task DeleteRangeAsync(List<T> entities)
+    {
+        throw new NotImplementedException();
+    }
+
     public Task<T> FirstOrDefaultNoTracking(Expression<Func<T, bool>> predicate)
     {
         throw new NotImplementedException();
@@ -79,18 +84,24 @@ public class UserRepository<T> : IUserRepository<T> where T : ApplicationUser
         throw new NotImplementedException();
     }
 
-    public Task UpdateAsync(T entity)
+    public async Task UpdateAsync(T entity)
     {
-        throw new NotImplementedException();
+        await _userManager.UpdateAsync(entity);
+        await _context.SaveChangesAsync();
     }
 
-    public Task UpdateRangeAsync(List<T> entity)
+    public async Task UpdateRangeAsync(List<T> entity)
     {
-        throw new NotImplementedException();
+        foreach(var userEntity in entity)
+        {
+            await _userManager.UpdateAsync(userEntity);
+            await _context.SaveChangesAsync();
+        }
     }
 
     public Task<GenericResponse> VerifyUserAsync(VerifyUserVm request)
     {
+        
         throw new NotImplementedException();
     }
 }

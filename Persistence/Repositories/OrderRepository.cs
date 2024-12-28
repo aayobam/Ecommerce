@@ -8,5 +8,6 @@ public class OrderRepository : GenericRepository<Order>, IOrderRepository
 {
     public OrderRepository(EcommerceDbContext context) : base(context)
     {
+
     }
 }

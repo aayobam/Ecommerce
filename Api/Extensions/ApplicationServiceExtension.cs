@@ -1,4 +1,6 @@
-﻿using Api.Middleware;
+﻿using Api.HealthChecks;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using System.Reflection;
@@ -72,6 +74,7 @@ public static class ApplicationServiceExtension
                     }
             });
         });
+        services.AddMemoryCache();
         return services;
     }
 
@@ -90,7 +93,20 @@ public static class ApplicationServiceExtension
             context.Response.Headers.Add("Feature-Policy", "accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none';");
             await next();
         });
-        app.UseMiddleware<DatabaseMigrationMiddleware>();
+
+        app.MapHealthChecks("/healthcheck", new HealthCheckOptions
+        {
+            ResultStatusCodes =
+            {
+                [HealthStatus.Healthy] = StatusCodes.Status200OK,
+                [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable,
+                [HealthStatus.Degraded] = StatusCodes.Status200OK,
+            },
+            ResponseWriter = JsonWriteResponse.WriteResponse
+        }).AllowAnonymous();
+
+        //app.UseMiddleware<DatabaseMigrationMiddleware>();
+
         return app;
     }
 }

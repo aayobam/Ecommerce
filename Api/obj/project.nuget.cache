@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "ODcfpw0fq4k=",
+  "dgSpecHash": "J+ROzheYMtE=",
   "success": true,
   "projectFilePath": "C:\\Users\\aolowu.SIDD2-D54-W11\\Desktop\\PERSONAL DOTNET PROJECTS\\Ecommerce\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aolowu.SIDD2-D54-W11\\.nuget\\packages\\aspnetcore.healthchecks.ui.client\\8.0.1\\aspnetcore.healthchecks.ui.client.8.0.1.nupkg.sha512",
     "C:\\Users\\aolowu.SIDD2-D54-W11\\.nuget\\packages\\aspnetcore.healthchecks.ui.core\\8.0.1\\aspnetcore.healthchecks.ui.core.8.0.1.nupkg.sha512",
     "C:\\Users\\aolowu.SIDD2-D54-W11\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\aolowu.SIDD2-D54-W11\\.nuget\\packages\\awssdk.core\\3.7.400.69\\awssdk.core.3.7.400.69.nupkg.sha512",
+    "C:\\Users\\aolowu.SIDD2-D54-W11\\.nuget\\packages\\awssdk.s3\\3.7.410.11\\awssdk.s3.3.7.410.11.nupkg.sha512",
     "C:\\Users\\aolowu.SIDD2-D54-W11\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\aolowu.SIDD2-D54-W11\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\aolowu.SIDD2-D54-W11\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",

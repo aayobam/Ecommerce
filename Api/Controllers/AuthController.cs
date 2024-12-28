@@ -1,57 +1,57 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Api.Controllers
+namespace Api.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class AuthController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class AuthController : ControllerBase
+    public AuthController()
     {
-        private readonly IMapper _mapper;
+        
+    }
 
-        public AuthController(IMapper mapper)
-        {
-            _mapper = mapper;
-        }
+    [HttpPost("user-login")]
+    [ProducesDefaultResponseType]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> Login()
+    {
+        var response = "";
+        return Ok(response);
+    }
 
-        [HttpPost("user-login")]
-        [ProducesDefaultResponseType]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult> Login()
-        {
+    [HttpPost("user-logout")]
+    [ProducesDefaultResponseType]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> Logout()
+    {
+        var response = "";
+        return Ok(response);
+    }
 
-        }
+    [HttpPost("request-password-reset")]
+    [ProducesDefaultResponseType]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<ActionResult> RequestPasswordReset()
+    {
+        var response = "";
+        return Ok(response);
+    }
 
-        [HttpPost("user-logout")]
-        [ProducesDefaultResponseType]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult> Logout()
-        {
-
-        }
-
-        [HttpPost("request-password-reset")]
-        [ProducesDefaultResponseType]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult> RequestPasswordReset()
-        {
-
-        }
-
-        [HttpPost("set-password")]
-        [ProducesDefaultResponseType]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult> SetPassword()
-        {
-
-        }
+    [HttpPost("set-password")]
+    [ProducesDefaultResponseType]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> SetPassword()
+    {
+        var response = "";
+        return Ok(response);
     }
 }

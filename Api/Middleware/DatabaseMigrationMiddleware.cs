@@ -1,11 +1,11 @@
-﻿using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
-using Persistence.DatabaseContexts;
+﻿using Microsoft.EntityFrameworkCore;
 using Polly;
+using Persistence.DatabaseContexts;
+using Microsoft.Data.SqlClient;
 
 namespace Api.Middleware;
 
-public class DatabaseMigrationMiddleware
+public static class DatabaseMigrationMiddleware
 {
     public static void ApplyMigrations(WebApplication app)
     {
@@ -13,8 +13,9 @@ public class DatabaseMigrationMiddleware
         {
             var services = scope.ServiceProvider;
 
-            var logger = services.GetRequiredService<ILogger<DatabaseMigrationMiddleware>>();
+            var logger = services.GetRequiredService<ILogger<EcommerceDbContext>>();
             var db = services.GetRequiredService<EcommerceDbContext>();
+            var configuration = services.GetRequiredService<IConfiguration>();
 
             try
             {
@@ -22,18 +23,17 @@ public class DatabaseMigrationMiddleware
 
                 var retryPolicy = Policy.Handle<SqlException>()
                     .WaitAndRetry(
-                        new[]
-                        {
-                            TimeSpan.FromSeconds(5),
-                            TimeSpan.FromSeconds(10),
-                            TimeSpan.FromSeconds(15),
-                            TimeSpan.FromMinutes(1),
-                        },
-                        onRetry: (exception, timeSpan, retryCount, context) =>
-                        {
-                            logger.LogWarning($"Retry {retryCount} encountered an error: {exception.Message}. Waiting {timeSpan} before next retry.");
-                        }
-                    );
+                    new[]
+                    {
+                    TimeSpan.FromSeconds(5),
+                    TimeSpan.FromSeconds(10),
+                    TimeSpan.FromSeconds(15),
+                    TimeSpan.FromMinutes(20),
+                    },
+                    onRetry: (exception, timeSpan, retryCount, context) =>
+                    {
+                        logger.LogWarning($"Retry {retryCount} encountered an error: {exception.Message}. Waiting {timeSpan} before next retry.");
+                    });
 
                 retryPolicy.Execute(() =>
                 {

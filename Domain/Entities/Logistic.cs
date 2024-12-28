@@ -12,6 +12,7 @@ public class Logistic : BaseEntity
     public string Lga { get; set; }
     public string PostalCode { get; set; }
     public string State { get; set; }
-    public string? Country { get; set; } = "Nigeria";
+    public string Country { get; set; } = "Nigeria";
+    public virtual ICollection<ApplicationUser> Users { get; set; }
     public virtual ICollection<Driver> Drivers { get; set; }
 }

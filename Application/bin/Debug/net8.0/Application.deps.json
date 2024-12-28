@@ -13,7 +13,6 @@
           "FluentValidation.DependencyInjectionExtensions": "11.10.0",
           "MediatR": "12.4.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
           "Microsoft.Extensions.DependencyInjection": "8.0.1",
           "Microsoft.Extensions.Options": "8.0.2",
           "Microsoft.IdentityModel.Tokens": "8.1.2",
@@ -433,8 +432,7 @@
       "System.Text.Json/4.7.2": {},
       "Domain/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
-          "Microsoft.Extensions.Identity.Core": "8.0.11"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11"
         },
         "runtime": {
           "Domain.dll": {

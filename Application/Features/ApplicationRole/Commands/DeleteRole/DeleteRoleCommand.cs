@@ -2,7 +2,4 @@
 
 namespace Application.Features.ApplicationRole.Commands.DeleteRole;
 
-public class DeleteRoleCommand : IRequest<Unit>
-{
-    public Guid Id { get; set; }
-}
+public record DeleteRoleCommand(Guid Id) : IRequest<Unit>;

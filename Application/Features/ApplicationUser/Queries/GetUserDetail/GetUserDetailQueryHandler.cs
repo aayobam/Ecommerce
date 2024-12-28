@@ -23,11 +23,11 @@ public class GetUserDetailQueryHandler : IRequestHandler<GetUserDetailQuery, Use
 
     public async Task<UserVm> Handle(GetUserDetailQuery request, CancellationToken cancellationToken)
     {
-        var instance = await _userRepository.GetByIdAsync(request.Id);
+        var instance = await _userRepository.GetByIdAsync(request.id);
         if (instance == null)
         {
-            _logger.LogInformation($"{nameof(instance)} - {request.Id} not found | {DateTimeOffset.Now}");
-            throw new EcommerceNotFoundException(nameof(instance), request.Id, HttpStatusCode.NotFound.ToString());
+            _logger.LogInformation($"{nameof(instance)} - {request.id} not found | {DateTimeOffset.Now}");
+            throw new EcommerceNotFoundException(nameof(instance), request.id, HttpStatusCode.NotFound.ToString());
         }
         var data = _mapper.Map<UserVm>(instance);
         return data;

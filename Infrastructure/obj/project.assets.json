@@ -18,6 +18,35 @@
           }
         }
       },
+      "AWSSDK.Core/3.7.400.69": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.410.11": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.7.400.69, 4.0.0)"
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Azure.Core/1.38.0": {
         "type": "package",
         "dependencies": {
@@ -823,6 +852,35 @@
           }
         }
       },
+      "Polly/8.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Polly.Core": "8.5.0"
+        },
+        "compile": {
+          "lib/net6.0/Polly.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Polly.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Polly.Core/8.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Polly.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Polly.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Scrutor/3.3.0": {
         "type": "package",
         "dependencies": {
@@ -1335,7 +1393,6 @@
           "FluentValidation.DependencyInjectionExtensions": "11.10.0",
           "MediatR": "12.4.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
           "Microsoft.Extensions.DependencyInjection": "8.0.1",
           "Microsoft.Extensions.Options": "8.0.2",
           "Microsoft.IdentityModel.Tokens": "8.1.2",
@@ -1354,8 +1411,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.10",
-          "Microsoft.Extensions.Identity.Core": "8.0.10"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -1369,8 +1425,10 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Application": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.11",
-          "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0"
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "8.0.0",
+          "Polly": "8.5.0"
         },
         "compile": {
           "bin/placeholder/Persistence.dll": {}
@@ -1395,6 +1453,67 @@
         "icon.png",
         "lib/net6.0/AutoMapper.dll",
         "lib/net6.0/AutoMapper.xml"
+      ]
+    },
+    "AWSSDK.Core/3.7.400.69": {
+      "sha512": "s8hAQxtbPxSEtq5tkvVN2qdbY2ggxyGsAwNJ0acpP76rV77KKpJg7PsferHUvUj4g4BKkj3fSTru128v0afJYw==",
+      "type": "package",
+      "path": "awssdk.core/3.7.400.69",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.3.7.400.69.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "images/AWSLogo.png",
+        "lib/net35/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.pdb",
+        "lib/net35/AWSSDK.Core.xml",
+        "lib/net45/AWSSDK.Core.dll",
+        "lib/net45/AWSSDK.Core.pdb",
+        "lib/net45/AWSSDK.Core.xml",
+        "lib/net8.0/AWSSDK.Core.dll",
+        "lib/net8.0/AWSSDK.Core.pdb",
+        "lib/net8.0/AWSSDK.Core.xml",
+        "lib/netcoreapp3.1/AWSSDK.Core.dll",
+        "lib/netcoreapp3.1/AWSSDK.Core.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.pdb",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "tools/account-management.ps1"
+      ]
+    },
+    "AWSSDK.S3/3.7.410.11": {
+      "sha512": "Llx+iG5GOwpjr9zG4dq39JKrTgqzyPe0r/unvNjV4kPyKH8I9RSTfB01gTLb3gupKgOAp7loxL1FfTWhIuCrzA==",
+      "type": "package",
+      "path": "awssdk.s3/3.7.410.11",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
+        "analyzers/dotnet/cs/SharedAnalysisCode.dll",
+        "awssdk.s3.3.7.410.11.nupkg.sha512",
+        "awssdk.s3.nuspec",
+        "images/AWSLogo.png",
+        "lib/net35/AWSSDK.S3.dll",
+        "lib/net35/AWSSDK.S3.pdb",
+        "lib/net35/AWSSDK.S3.xml",
+        "lib/net45/AWSSDK.S3.dll",
+        "lib/net45/AWSSDK.S3.pdb",
+        "lib/net45/AWSSDK.S3.xml",
+        "lib/net8.0/AWSSDK.S3.dll",
+        "lib/net8.0/AWSSDK.S3.pdb",
+        "lib/net8.0/AWSSDK.S3.xml",
+        "lib/netcoreapp3.1/AWSSDK.S3.dll",
+        "lib/netcoreapp3.1/AWSSDK.S3.pdb",
+        "lib/netcoreapp3.1/AWSSDK.S3.xml",
+        "lib/netstandard2.0/AWSSDK.S3.dll",
+        "lib/netstandard2.0/AWSSDK.S3.pdb",
+        "lib/netstandard2.0/AWSSDK.S3.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "Azure.Core/1.38.0": {
@@ -2533,6 +2652,59 @@
         "packageIcon.png"
       ]
     },
+    "Polly/8.5.0": {
+      "sha512": "GBNZPy7i7OpkaIruWPRJ0+AWzdGDQDnKY91b7Ic2aAch4lKhPjUc5KSffpH9krIWe0MoyghqaRxwRC0Uwz2PkA==",
+      "type": "package",
+      "path": "polly/8.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Polly.dll",
+        "lib/net462/Polly.pdb",
+        "lib/net462/Polly.xml",
+        "lib/net472/Polly.dll",
+        "lib/net472/Polly.pdb",
+        "lib/net472/Polly.xml",
+        "lib/net6.0/Polly.dll",
+        "lib/net6.0/Polly.pdb",
+        "lib/net6.0/Polly.xml",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.xml",
+        "package-icon.png",
+        "package-readme.md",
+        "polly.8.5.0.nupkg.sha512",
+        "polly.nuspec"
+      ]
+    },
+    "Polly.Core/8.5.0": {
+      "sha512": "VYYMZNitZ85UEhwOKkTQI63WEMvzUqwQc74I2mm8h/DBVAMcBBxqYPni4DmuRtbCwngmuONuK2yBJfWNRKzI+A==",
+      "type": "package",
+      "path": "polly.core/8.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Polly.Core.dll",
+        "lib/net462/Polly.Core.pdb",
+        "lib/net462/Polly.Core.xml",
+        "lib/net472/Polly.Core.dll",
+        "lib/net472/Polly.Core.pdb",
+        "lib/net472/Polly.Core.xml",
+        "lib/net6.0/Polly.Core.dll",
+        "lib/net6.0/Polly.Core.pdb",
+        "lib/net6.0/Polly.Core.xml",
+        "lib/net8.0/Polly.Core.dll",
+        "lib/net8.0/Polly.Core.pdb",
+        "lib/net8.0/Polly.Core.xml",
+        "lib/netstandard2.0/Polly.Core.dll",
+        "lib/netstandard2.0/Polly.Core.pdb",
+        "lib/netstandard2.0/Polly.Core.xml",
+        "package-icon.png",
+        "package-readme.md",
+        "polly.core.8.5.0.nupkg.sha512",
+        "polly.core.nuspec"
+      ]
+    },
     "Scrutor/3.3.0": {
       "sha512": "BwqCnFzp2/Z+pq17iztxlIkR/ZANyPRR4PdE57WL1w/JW4AM/2imoxBWTL3+G+YXA46ce4s9OUgwWqTXYrtI8A==",
       "type": "package",
@@ -3365,6 +3537,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "AWSSDK.S3 >= 3.7.410.11",
       "Persistence >= 1.0.0",
       "SendGrid >= 9.29.3"
     ]
@@ -3423,6 +3596,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "AWSSDK.S3": {
+            "target": "Package",
+            "version": "[3.7.410.11, )"
+          },
           "SendGrid": {
             "target": "Package",
             "version": "[9.29.3, )"

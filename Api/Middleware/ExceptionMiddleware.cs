@@ -41,7 +41,7 @@ public class ExceptionMiddleware
                     Status = (int)statusCode,
                     Detail = badRequestException.InnerException?.Message,
                     Type = nameof(EcommerceBadRequestException),
-                    Errors = badRequestException.ValidationErrors
+                    Errors = badRequestException.ValidationErrors 
                 };
                 break;
 
@@ -99,8 +99,7 @@ public class ExceptionMiddleware
                 };
                 break;
         }
-
         httpContext.Response.StatusCode = (int)statusCode;
-        //await httpContext.Response.WriteAsJsonAsync(problem);
+        await httpContext.Response.WriteAsJsonAsync((string)problem);
     }
 }

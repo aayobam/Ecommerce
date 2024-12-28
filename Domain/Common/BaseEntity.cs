@@ -3,6 +3,6 @@
 public abstract class BaseEntity
 {
     public Guid Id { get; set; }
-    public DateTime DateCreated { get; set; } = DateTime.UtcNow;
-    public DateTime DateModified { get; set; } = DateTime.UtcNow;
+    public DateTimeOffset DateCreated { get; set; }
+    public DateTimeOffset DateModified { get; set; }
 }

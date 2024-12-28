@@ -14,8 +14,6 @@ public class CommonHelper
 
     public static bool IsValidPhoneNumber(string phoneNumber, string countryCode)
     {
-        // Phone number util validation 
-        //return true;
         bool valid = false;
 
         try
@@ -69,7 +67,7 @@ public class CommonHelper
     {
         if (string.IsNullOrEmpty(base64EncodedString))
         {
-            return default;
+            return default!;
         }
         else
         {
@@ -203,7 +201,7 @@ public class CommonHelper
         if (IV == null || IV.Length <= 0)
             throw new ArgumentNullException(nameof(IV));
 
-        string plaintext = null;
+        string plaintext = null!;
 
         using (Aes aesAlg = Aes.Create())
         {

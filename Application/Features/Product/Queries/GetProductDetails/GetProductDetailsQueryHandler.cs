@@ -5,6 +5,7 @@ using Domain.Dtos.Product;
 using Domain.Entities;
 using Domain.Exceptions;
 using MediatR;
+using Microsoft.Extensions.Caching.Memory;
 using System.Net;
 
 namespace Application.Features.Product.Queries.GetProductDetails;
@@ -14,12 +15,14 @@ public class GetProductDetailsQueryHandler : IRequestHandler<GetProductDetailsQu
     private readonly IApplicationLogger<GetProductDetailsQueryHandler> _logger;
     private readonly IMapper _mapper;
     private readonly IProductRepository _productRepository;
+    private readonly IMemoryCache _cache;
 
-    public GetProductDetailsQueryHandler(IApplicationLogger<GetProductDetailsQueryHandler> logger,IMapper mapper, IProductRepository productRepository)
+    public GetProductDetailsQueryHandler(IApplicationLogger<GetProductDetailsQueryHandler> logger,IMapper mapper, IProductRepository productRepository, IMemoryCache cache)
     {
         _logger = logger;
         _mapper = mapper;
         _productRepository = productRepository;
+        _cache = cache;
     }
 
     public IMapper Mapper { get; }
@@ -27,15 +30,31 @@ public class GetProductDetailsQueryHandler : IRequestHandler<GetProductDetailsQu
 
     public async Task<ProductVm> Handle(GetProductDetailsQuery request, CancellationToken cancellationToken)
     {
-        var instance = await _productRepository.GetByIdAsync(request.id);
+        var product = await _productRepository.GetByIdAsync(request.id);
 
-        if (instance == null)
+        if (product == null)
         {
-            _logger.LogInformation($"\n {nameof(instance)} - {request.id} not found | {DateTime.UtcNow} \n");
-            throw new EcommerceNotFoundException(nameof(instance), request.id, HttpStatusCode.NotFound.ToString());
+            _logger.LogInformation($"\n {nameof(product)} - {request.id} not found | {DateTime.UtcNow} \n");
+            throw new EcommerceNotFoundException(nameof(product), request.id, HttpStatusCode.NotFound.ToString());
         }
 
-        var data = _mapper.Map<ProductVm>(instance);
+        string cacheKey = "product";
+        var data = _mapper.Map<ProductVm>(product);
+
+        var cacheOption = new MemoryCacheEntryOptions()
+        {
+            AbsoluteExpirationRelativeToNow = TimeSpan.FromDays(1)
+        };
+
+        if (_cache.Get(cacheKey) == null)
+        {
+            await _cache.GetOrCreateAsync(cacheKey, async entry =>
+            {
+                entry.SetOptions(cacheOption);
+                return product;
+            });
+        }
+        _cache.Set(cacheKey, product);
 
         return data;
     }

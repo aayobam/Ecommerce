@@ -2,14 +2,20 @@
 using Domain.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Persistence.Extensions;
 
 namespace Persistence.DatabaseContexts;
 
-public class EcommerceDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string>
+public class EcommerceDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
 {
     public EcommerceDbContext(DbContextOptions<EcommerceDbContext> options) : base(options)
     {
 
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseSqlServer("EcommerceDbConnectionString").AddInterceptors(new SlowQueryInterceptor());
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -24,16 +30,17 @@ public class EcommerceDbContext : IdentityDbContext<ApplicationUser, Application
         {
             if (entry.State == EntityState.Added)
             {
-                entry.Entity.DateCreated = DateTime.UtcNow;
+                entry.Entity.DateCreated = DateTimeOffset.UtcNow;
             } 
-            entry.Entity.DateModified = DateTime.UtcNow;
+            entry.Entity.DateModified = DateTimeOffset.UtcNow;
         }
-
         return base.SaveChangesAsync(cancellationToken);
     }
 
     public DbSet<ApplicationUser> Users { get; set; }
     public DbSet<ApplicationRole> Roles { get; set; }
+    public DbSet<ApplicationUserRole> UserRoles { get; set; }
+    public DbSet<ApplicationRoleClaim> RoleClaims {  get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Product> Products { get; set; }
     public DbSet<Vendor> Vendors { get; set; }
@@ -44,4 +51,5 @@ public class EcommerceDbContext : IdentityDbContext<ApplicationUser, Application
     public DbSet<WishList> WishLists { get; set; }
     public DbSet<Vendor> Reviews { get; set; }
     public DbSet<AuditTrail> AuditTrails { get; set; }
+    public DbSet<OtpVerification> OtpVerifications { get; set; }
 }
