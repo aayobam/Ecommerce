@@ -1,0 +1,78 @@
+# .gitignore
+**/bin/
+**/Debug/
+appsettings*.json
+
+# .gitignore for .NET Core 8 Web API
+
+# Build artifacts
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider/JetBrains IDE files
+.idea/
+*.sln.iml
+
+# Visual Studio Code files
+.vscode/
+
+# Visual Studio files
+.vs/
+
+# Logs
+*.log
+logs/
+
+# Packages
+*.nupkg
+*.snupkg
+
+# Transient dependency folders
+packages/
+node_modules/
+
+# Debug and Release folders
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm/
+[Aa]rm64/
+
+# Publish output
+publish/
+
+# Generated files
+*.g.cs
+*.g.i.cs
+*.generated.cs
+*.Designer.cs
+
+# Database and cache files
+*.db
+*.sql
+*.sqlite
+*.cache
+
+# Configuration files with sensitive data
+appsettings.*.json
+
+# IDE config
+*.DotSettings.user
+
+# Resharper files
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# MacOS files
+.DS_Store
+
+# Windows Thumbs
+Thumbs.db
